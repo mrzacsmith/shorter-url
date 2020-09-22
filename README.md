@@ -11,6 +11,9 @@ We will be using the following to accomplish this project:
 - LocalStorage
 - yup
 - cypress
+- font awesome
+- IcoMoon
+- Ionicons
 - more as we come to it ...
 
 Your users should be able to:
