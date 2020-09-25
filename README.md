@@ -7,9 +7,10 @@ We will be using the following to accomplish this project:
 - React (`npx lambda-react .`)
 - axios
 - styled-components
+- react-form-hook
 - useState
+- useEffect
 - LocalStorage
-- yup
 - cypress
 - font awesome
 - IcoMoon
