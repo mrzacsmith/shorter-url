@@ -1,13 +1,13 @@
 import React from 'react'
 
-const LinkBox = () => {
+const LinkBox = ({ hashid, url }) => {
   return (
     <div>
       <div>
-        <p>old url</p>
+        <p>{url}</p>
       </div>
       <div>
-        <a href="#">short url</a>
+        <a href={`https://rel.ink/${hashid}`}>{`https://rel.ink/${hashid}`}</a>
         <button>COPY</button>
       </div>
     </div>
