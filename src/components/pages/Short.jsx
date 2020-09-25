@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import axios from 'axios'
+import LinkBox from './LinkBox.jsx'
 
 const Short = () => {
   const { handleSubmit, register, errors } = useForm()
   const [shortUrl, setShortUrl] = useState([])
   const POST_URL = 'https://rel.ink/api/links/'
   const onSub = (input) => {
-    console.log(input)
+    // console.log(input)
     axios
       .post(POST_URL, input)
       .then((res) => {
@@ -16,6 +17,9 @@ const Short = () => {
       .catch((err) => console.log(`Error: ${err}`))
       .finally()
   }
+
+  const { hashid, url } = shortUrl
+  console.log(hashid, url)
 
   return (
     <div>
@@ -35,6 +39,7 @@ const Short = () => {
         {errors.url && errors.url.message}
         <button type="submit">Shorten It!</button>
       </form>
+      <LinkBox />
     </div>
   )
 }
