@@ -7,20 +7,22 @@ const Short = () => {
 
   return (
     <div>
-      <input
-        type="text"
-        name="urlShort"
-        placeholder="Enter your URL"
-        ref={register({
-          required: 'Required',
-          pattern: {
-            // value: '',
-            message: 'please enter a URL',
-          },
-        })}
-      />
-      {errors.urlShort && errors.urlShort.message}
-      <button type="submit">Shorten It!</button>
+      <form onSubmit={handleSubmit(onSub)}>
+        <input
+          type="text"
+          name="urlShort"
+          placeholder="Enter your URL"
+          ref={register({
+            required: 'Required',
+            pattern: {
+              // value: '',
+              message: 'please enter a URL',
+            },
+          })}
+        />
+        {errors.urlShort && errors.urlShort.message}
+        <button type="submit">Shorten It!</button>
+      </form>
     </div>
   )
 }
